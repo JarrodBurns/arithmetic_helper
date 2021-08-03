@@ -48,7 +48,7 @@ while True:
                     error_found = True
 
             for i in prob_one.all_bottoms():
-                if i.isdigit() is True and i is not bool:
+                if i.isdigit() is False and i is not bool:
                     print("Error: Numbers must only contain digits.")
                     error_found = True
 
@@ -57,7 +57,7 @@ while True:
                     error_found = True
 
             for i in prob_one.all_tops():
-                if i.isdigit() is True and i is not bool:
+                if i.isdigit() is False and i is not bool:
                     print("Error: Numbers must only contain digits.")
                     error_found = True
 

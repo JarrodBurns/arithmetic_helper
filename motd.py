@@ -8,6 +8,7 @@ message = [
     "1 + 2",
     "",
     "Up to (4) problems may be submitted at once.",
+    "",
     "1 + 2, 4 - 3 ...",
     "",
     "To display the solution with you problem",
