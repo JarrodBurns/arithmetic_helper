@@ -7,7 +7,7 @@ message = [
     "",
     "1 + 2",
     "",
-    "Up to (4) problems may be submitted at once.",
+    "Up to (5) problems may be submitted at once.",
     "",
     "1 + 2, 4 - 3 ...",
     "",
@@ -22,7 +22,6 @@ message = [
     "",
     "Only Addition and subtraction are supported.",
     "Numbers may not exceed (4) digits in length.",
-    "You may not submit more than (5) problems at once.",
     "",
     'You may exit this program at anytime by typing "Quit"'
 ]
