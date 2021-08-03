@@ -7,7 +7,7 @@ class Problem:
 
     def __init__(self, list, bool=False):
         self.list = list
-        self.boolean = bool
+        self.show_answer = bool
 
     def addition(self, x, y):
         return int(x) + int(y)
@@ -75,76 +75,3 @@ class Problem:
         for i in self.list:
             t.append(i.split()[1])
         return t
-
-    def format_row_header(self):
-        """
-        Uses the length of format_row_one() for spacing.
-        """
-        t = []
-        t.append("*")
-        t.append("-" * (len(self.format_row_one()) - 2))
-        t.append("*")
-        return("".join(t))
-
-    def format_row_spacer(self):
-        """
-        Uses the length of format_row_one() for spacing.
-        """
-        t = []
-        t.append("|")
-        t.append(" " * (len(self.format_row_one()) - 2))
-        t.append("|")
-        return("".join(t))
-
-    def format_row_one(self):
-        """
-        Value 1.
-        """
-        t = []
-        for i in range(0, self.number_of_problems()):
-            if i == 0:
-                t.append("|    ")
-            t.append(self.top(i).rjust(self.length(i) + 2))
-            t.append("    ")
-        t.append("|")
-        return "".join(t)
-
-    def format_row_two(self):
-        """
-        Value 2.
-        """
-        t = []
-        for i in range(0, self.number_of_problems()):
-            if i == 0:
-                t.append("|    ")
-            t.append(self.sign(i))
-            t.append(self.bottom(i).rjust(self.length(i) + 1))
-            t.append("    ")
-        t.append("|")
-        return "".join(t)
-
-    def format_row_three(self):
-        """
-        The dashes.
-        """
-        t = []
-        for i in range(0, self.number_of_problems()):
-            if i == 0:
-                t.append("|    ")
-            t.append(self.dash(i))
-            t.append("    ")
-        t.append("|")
-        return "".join(t)
-
-    def format_row_four(self):
-        """
-        The answers.
-        """
-        t = []
-        for i in range(0, self.number_of_problems()):
-            if i == 0:
-                t.append("|    ")
-            t.append(self.answer(i).rjust(self.length(i) + 2))
-            t.append("    ")
-        t.append("|")
-        return "".join(t)

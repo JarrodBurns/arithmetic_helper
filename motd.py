@@ -27,20 +27,49 @@ message = [
 ]
 
 
-def motd(padding=61):
+def motd(
+    padding=61,
+    corner="*",
+    left_and_right_column="|",
+    top_and_bottom_row="-",
+    white_space=" "
+
+):
     """
     Displays the current Message of the Day.
     Default centerline padding is 61.
     """
     for i in message:
-        # padding = int(padding)
 
         if i == message[0]:
-            print("*", "-" * padding, "*")
-            print("|", " " * padding, "|")
+            print(corner,
+                  top_and_bottom_row * padding,
+                  corner
+                  )
+            print(left_and_right_column,
+                  white_space * padding,
+                  left_and_right_column
+                  )
+
         if i == message[-1]:
-            print("|", i.center(padding), "|")
-            print("|", " " * padding, "|")
-            print("*", "-" * padding, "*")
+            print(
+                left_and_right_column,
+                i.center(padding),
+                left_and_right_column
+            )
+            print(
+                left_and_right_column,
+                white_space * padding,
+                left_and_right_column
+            )
+            print(
+                corner,
+                top_and_bottom_row * padding,
+                corner
+            )
+
         else:
-            print("|", i.center(padding), "|")
+            print(left_and_right_column,
+                  i.center(padding),
+                  left_and_right_column
+                  )
